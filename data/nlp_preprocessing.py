@@ -14,8 +14,9 @@ class Solution:
         result=[]
         store_words=set()
         for sentence in all_sentence:
-            for word in sentence.split():
-                store_words.add(word)
+            # for word in sentence.split():
+            #     store_words.add(word)
+            store_words.update(sentence.split())
         sorted_words=sorted(store_words)
         vocab={}
         for index,word in enumerate(sorted_words,start=1):
