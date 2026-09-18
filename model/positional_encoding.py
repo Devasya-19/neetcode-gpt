@@ -12,8 +12,8 @@ class Solution:
         # Assign sine to even columns (PE[:, 0::2]) and cosine to odd columns (PE[:, 1::2]).
         # Round to 5 decimal places.
         pass
-        position=np.arange(seq_len)[:,None]
-        i=np.arange(d_model//2)[None,:]
+        position=np.arange(seq_len).reshape(seq_len,1)
+        i=np.arange(d_model//2).reshape(1,d_model//2)
         angle=position/(10000**(2*i/d_model))
         pe=np.zeros((seq_len,d_model))
         pe[:,0::2]=np.sin(angle)
