@@ -13,7 +13,7 @@ class Solution:
         pass
         token=list(corpus)
         merges=[]
-        for _ in range(num_merges):
+        for a in range(num_merges):
             pair_count=Counter()
             for i in range(len(token)-1):
                 pair=(token[i],token[i+1])
